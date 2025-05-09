@@ -25,7 +25,24 @@ jobs:
           --exclude '*.css' \
           --exclude 'image/*' \
           --exclude '*.rss' \
+          --exclude 'redirect/*' \
           --delete \
           --metadata-directive REPLACE \
           --cache-control "max-age=86400, no-cache, public" \
           ./ s3://tenjuu-net-web/
+
+          aws s3 sync \
+          --region ap-northeast-1 \
+          --exact-timestamps \
+          --exclude '.git/*' \
+          --exclude '.github/*' \
+          --exclude .gitignore \
+          --exclude '*.css' \
+          --exclude 'image/*' \
+          --exclude '*.rss' \
+          --exclude 'redirect/*' \
+          --delete \
+          --metadata-directive REPLACE \
+          --cache-control "max-age=86400, no-cache, public" \
+          --location /index.html \
+          ./redirect/ s3://tenjuu-net-web/
