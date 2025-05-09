@@ -43,6 +43,6 @@ jobs:
           --exclude 'redirect/*' \
           --metadata-directive REPLACE \
           --cache-control "max-age=86400, no-cache, public" \
-          --metadata "Website-Redirect-Location=/index.html" \
+          --metadata "WebsiteRedirectLocation=index.html" \
           --metadata "HttpRedirectCode=302" \
           ./redirect/ s3://tenjuu-net-web/
