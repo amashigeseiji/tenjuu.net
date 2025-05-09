@@ -20,6 +20,7 @@ jobs:
           --region ap-northeast-1 \
           --exact-timestamps \
           --exclude '.git/*' \
+          --exclude '.github/*' \
           --exclude .gitignore \
           --exclude '*.css' \
           --exclude 'image/*' \
