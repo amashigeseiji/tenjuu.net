@@ -41,7 +41,6 @@ jobs:
           --exclude 'image/*' \
           --exclude '*.rss' \
           --exclude 'redirect/*' \
-          --delete \
           --metadata-directive REPLACE \
           --cache-control "max-age=86400, no-cache, public" \
           --metadata "Website-Redirect-Location=/index.html" \
