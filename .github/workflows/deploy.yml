@@ -19,6 +19,7 @@ jobs:
           aws s3 sync \
           --region ap-northeast-1 \
           --exact-timestamps \
+          --exclude '.git/*' \
           --exclude .gitignore \
           --exclude '*.css' \
           --exclude 'image/*' \
